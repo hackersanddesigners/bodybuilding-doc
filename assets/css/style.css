@@ -1,0 +1,190 @@
+/**
+<h1> arial rounded, big, centred
+<h2> arial rounded, bold, left aligned
+<p> arial, white or black   
+<ul> (long em-dashes)
+<blockquote> (indent same size as p)
+
+Links:
+Courier blue
+Special links:
+Highlighted link elements: arial rounded, white, red background, centred
+Back to top button: Courier blue right alined…
+
+
+**/
+
+/*******************************************
+            ELEMENT STYLES
+********************************************/ 
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: yellow;
+    height: 300vh;
+    font-family: sans-serif;
+    font-size: 25px;
+    margin: 0;
+    padding: 30px;
+}
+
+h1, h2 {
+    font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: left;
+}
+
+ul {
+    list-style-type: "\2014\0020";
+}
+
+blockquote {
+    margin-left: 0;
+}
+
+a{
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+/*******************************************
+            GENERAL  LAYOUT
+********************************************/ 
+
+article{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header header header sidebar"
+        "main main main sidebar";
+    gap: 30px;
+    margin-top: 10rem;
+}
+
+article header {
+    grid-area: header;
+}
+
+article section.content {
+    grid-area: main;
+    padding: 30px;
+}
+
+article aside {
+    grid-area: sidebar;
+    z-index: -1;
+}
+
+article.full-width {
+    display: block;
+}
+
+aside img {
+    margin-bottom: 3rem;;
+}
+
+a.to-top {
+    display: block;
+    text-align: right;
+}
+
+a.to-top:after{
+    content: '↪';
+    font-size: 3em;
+}
+
+/*******************************************
+            ARTICLE STYLING
+********************************************/ 
+
+article header {
+    text-align: center;
+}
+
+article header a {
+    background-color: red;
+    font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
+    color: white;
+}
+
+/* 
+Article background colors 
+*/
+.content,
+.bg-blue {
+    background-color: blue;
+    color: white
+}
+
+.bg-white {
+    background-color: white;
+    color: black;
+}
+
+.bg-yellow {
+    background-color: yellow;
+    color: black;
+}
+
+/* 
+Adjust link color
+*/
+.bg-blue a {
+    color: white;
+}
+
+/*******************************************
+            SHADOWS
+********************************************/ 
+.shadow {
+    box-shadow: 30px 30px 30px 30px rgba( 0,0,0,0.7);
+}
+.shadow-inset {
+    box-shadow: 30px 30px 30px 30px rgba( 0,0,0,0.7) inset;
+}
+
+/*******************************************
+            OFFSET ASIDE IMAGES
+********************************************/ 
+img.pull {
+    margin-left: -4rem;
+}
+
+/*******************************************
+            RESPONSIVENESS
+********************************************/ 
+@media (max-width: 575.98px) { 
+    body {
+        font-size: 18px;
+    }
+
+    article{
+        display: block;
+    }
+
+    a,
+    header {
+        word-break: break-all;
+    }
+    
+    article aside {
+        display: none;
+    }
+}
