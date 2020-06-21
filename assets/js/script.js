@@ -1,7 +1,7 @@
 var to;
 
 const init = function(){
-    // pageScroll();
+    pageScroll();
 
     document.addEventListener( 'click', function () {
         if( to ) {
