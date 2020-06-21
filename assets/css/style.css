@@ -58,7 +58,7 @@ a{
     text-decoration: none;
 }
 
-img {
+img, video {
     max-width: 100%;
     width: 100%;
     height: auto;
@@ -94,6 +94,10 @@ article aside {
 }
 
 article.full-width {
+    display: block;
+}
+
+article.full-width img {
     display: block;
 }
 
