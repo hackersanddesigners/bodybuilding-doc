@@ -19,7 +19,10 @@ const pageScroll = function () {
     to = setTimeout(pageScroll,50);
 }
 
-
+var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+    // ... more custom settings?
+});
 
 
 
