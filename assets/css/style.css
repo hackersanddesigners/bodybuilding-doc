@@ -97,7 +97,8 @@ article.full-width {
     display: block;
 }
 
-article.full-width img {
+article.full-width img,
+article.full-width video {
     display: block;
 }
 
